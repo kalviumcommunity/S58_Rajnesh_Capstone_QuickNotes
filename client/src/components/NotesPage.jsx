@@ -135,6 +135,30 @@ const NotesPage = ({ onNavigate }) => {
                   placeholder="Write your note here..."
                 />
               </div>
+              <div>
+                <label className="block text-sm font-medium mb-2">Attachments</label>
+                <div className="border-2 border-dashed border-gray-600 rounded-md p-4 text-center hover:border-gray-500 transition-colors relative">
+                  <div className="flex flex-col items-center space-y-2">
+                    <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                    </svg>
+                    <p className="text-sm text-gray-400">
+                      <span className="font-medium text-blue-400 hover:text-blue-300 cursor-pointer">Click to upload</span> or drag and drop
+                    </p>
+                    <p className="text-xs text-gray-500">Images (PNG, JPG, GIF) or PDF files</p>
+                  </div>
+                  <input
+                    type="file"
+                    accept="image/*,.pdf"
+                    multiple
+                    className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                    onChange={(e) => {
+                      // Placeholder for file handling - will be implemented with backend
+                      console.log('Files selected:', e.target.files);
+                    }}
+                  />
+                </div>
+              </div>
             </div>
             <div className="flex space-x-3 mt-6">
               <button
