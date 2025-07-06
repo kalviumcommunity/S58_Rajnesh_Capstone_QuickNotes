@@ -5,6 +5,8 @@
 **Duration**: 6 Days  
 **Target Score**: 6.5 Points  
 
+**Deployed Link**: https://capstone-quicknotes.netlify.app/
+
 ---
 
 ## 📌 Project Overview
